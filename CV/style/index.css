@@ -1,0 +1,256 @@
+/**
+ * Created by 上善 on 2017/2/20.
+ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Microsoft YaHei UI";
+    text-decoration: none;
+    word-break: break-all;
+}
+
+html {
+    font-size: 100%;
+}
+
+a {
+    cursor: pointer;
+}
+
+.bk-wrapper .top a {
+    color: #FFFFFF;
+}
+
+/*微信二维码渲染*/
+#mark {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    filter: alpha(opacity=20);
+    z-index: 1;
+}
+
+#qr-code {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin: -152px 0 0 -150px;
+    z-index: 2;
+}
+
+#qr-code img {
+    width: 300px;
+    height: 300px;
+}
+
+/*超小屏幕，手机，小于768px/*/
+@media screen and (max-width: 992px) {
+    body {
+        width: 100%;
+        font-size: 1.2rem;
+    }
+
+    .bk-wrapper {
+
+    }
+
+    /*.top内元素垂直水平居中*/
+    .bk-wrapper .top {
+        height: 570px;
+        background-color: #2d4062;
+        display: flex;
+        flex-flow: column;
+        text-align: center;
+        color: #FFFFFF;
+        line-height: 34px;
+    }
+
+    .bk-wrapper .top #fourth {
+        margin-top: 60px;
+        margin-bottom: 20px;
+    }
+
+    .bk-wrapper .top #first {
+        margin-bottom: 40px;
+    }
+
+    .bk-wrapper .top #second,
+    .bk-wrapper .top #third {
+        text-align: left;
+        padding-left: 45px;
+    }
+
+    .bk-wrapper .middle-wrapper {
+        padding: 20px;
+        background-color: #eae2d7;
+    }
+
+    .bk-wrapper .middle-wrapper .skill,
+    .bk-wrapper .middle-wrapper .project,
+    .bk-wrapper .middle-wrapper .eduction,
+    .bk-wrapper .middle-wrapper .self-evaluation {
+        margin-bottom: 20px;
+    }
+
+    .bk-wrapper .middle-wrapper .project .contents #project_1 p span,
+    .bk-wrapper .middle-wrapper .project .contents #project_2 p span,
+    .bk-wrapper .middle-wrapper .project .contents #project_3 p span {
+        font-size: 1.3rem;
+        color: #aa7345;
+        margin-bottom: 20px;
+    }
+
+    .bk-wrapper .middle-wrapper .contents a {
+        color: #000000;
+    }
+
+    .bk-wrapper .middle-wrapper h3 {
+        color: #aa7345;
+    }
+
+    .bk-wrapper .middle-wrapper hr {
+        border: 2px solid #e3513a;
+        margin: 10px 0;
+
+    }
+
+    .bk-wrapper .middle-wrapper .contents p {
+        line-height: 30px;
+        margin-left: 2px;
+    }
+
+}
+
+/*小屏幕，平板，大于等于768px*/
+@media screen and (min-width: 768px) and (max-width: 992px) {
+
+    .bk-wrapper .top {
+        height: 520px;
+    }
+
+    .bk-wrapper .top #first {
+        margin-bottom: 40px;
+    }
+
+    .bk-wrapper .top #second {
+        position: relative;
+        left: 30px;
+    }
+
+    .bk-wrapper .top #third {
+        position: relative;
+        right: -380px;
+        top: -68px;
+    }
+
+}
+
+/*中等屏幕，桌面，大于等于992px;大屏幕，桌面，1200px*/
+@media screen and (min-width: 993px) {
+    body {
+        width: 100%;
+        display: -webkit-flex;
+        -webkit-flex-flow: column;
+        -webkit-align-items: center;
+        display: -moz-flex;
+        -moz-flex-flow: column;
+        -moz-align-items: center;
+        display: -ms-flex;
+        -ms-flex-flow: column;
+        -ms-align-items: center;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        background-color: #efefda;
+    }
+
+    .bk-wrapper {
+        width: 854px;
+    }
+
+    /*.top内元素垂直水平居中*/
+    .bk-wrapper .top {
+        height: 220px;
+        background-color: #2d4062;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 14px;
+        color: #FFFFFF;
+        line-height: 34px;
+    }
+
+    .bk-wrapper .top #fourth img{
+        width: 120px;
+    }
+
+    .bk-wrapper .middle-wrapper {
+        padding: 20px;
+        background-color: #eae2d7;
+    }
+
+    .bk-wrapper .middle-wrapper .skill,
+    .bk-wrapper .middle-wrapper .project,
+    .bk-wrapper .middle-wrapper .eduction,
+    .bk-wrapper .middle-wrapper .self-evaluation {
+        position: relative;
+    }
+
+    .bk-wrapper .middle-wrapper .contents {
+        display: inline-block;
+        width: 600px;
+        position: relative;
+        left: 164px;
+    }
+
+    .bk-wrapper .middle-wrapper .project .contents #project_1 p span,
+    .bk-wrapper .middle-wrapper .project .contents #project_2 p span,
+    .bk-wrapper .middle-wrapper .project .contents #project_3 p span {
+        font-size: 1rem;
+        color: #aa7345;
+        margin-bottom: 20px;
+    }
+
+    .bk-wrapper .middle-wrapper .contents a {
+        color: #000000;
+    }
+
+    .bk-wrapper .middle-wrapper h3 {
+        display: inline-block;
+        color: #aa7345;
+        position: absolute;
+        top: 4px;
+        left: 50px;
+    }
+
+    .bk-wrapper .middle-wrapper hr {
+        border: 2px solid #e3513a;
+        margin: 10px 0;
+
+    }
+
+    .bk-wrapper .middle-wrapper .contents p {
+        line-height: 30px;
+        margin-left: 2px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
